@@ -1,5 +1,6 @@
 const path = require('path');//node的路径模块
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const ESLintPlugin = require('eslint-webpack-plugin')
 
 module.exports = {
   entry: './src/index.js',
@@ -57,6 +58,10 @@ module.exports = {
     // 生成html文件
     new HtmlWebpackPlugin({
       title: 'senlin-webpack-demo'
-    })
+    }),
+    new ESLintPlugin({
+      // 需要通过eslint检查哪些文件
+      context: path.resolve(__dirname, "src")
+    }),
   ],
 }
