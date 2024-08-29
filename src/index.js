@@ -2,6 +2,7 @@ import style from './style.css';
 import iconfontStyle from './iconfont/iconfont.css';
 import run from './sync2async/sync2async';
 import main from './sync2async/demo';
+import { mySum } from './fn/sum';
 
 function component() {
   const element = document.createElement("div");
@@ -40,8 +41,9 @@ function appendIconfont() {
 document.body.appendChild(component());
 document.body.appendChild(genImgOri());
 document.body.appendChild(genImgIcon());
-
 appendIconfont()
+
+console.log('mySum',mySum(2,5))
 
 
 

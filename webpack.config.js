@@ -11,8 +11,8 @@ module.exports = {
     // assetModuleFilename: 'images/[hash][ext][query]',
     clean: true, //清空输出目录（dist） 
   },
-  mode: 'production', // production development
-  // mode: 'development', // production development
+  // mode: 'production', // production development
+  mode: 'development', // production development
   module: {
     rules: [
       // 处理css文件
@@ -49,6 +49,15 @@ module.exports = {
           // 输出名称
           // [hash:10]:取hash值前10位
           filename: "static/iconfont/[hash:10][ext][query]"
+        }
+      },
+      // 处理js文件
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: 'babel-loader',
+        options: {
+          presets: ['@babel/preset-env']
         }
       },
     ],
