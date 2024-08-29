@@ -12,12 +12,12 @@ function component() {
 }
 function genImgIcon() {
   const element = document.createElement("img");
-  element.setAttribute('src', require('./icon.png'))
+  element.setAttribute('src', require('./assets/icon.png'))
   return element;
 }
 function genImgOri() {
   const element = document.createElement("img");
-  element.setAttribute('src', require('./ori.jpg'))
+  element.setAttribute('src', require('./assets/ori.jpg'))
   element.setAttribute('width', '100px')
   return element;
 }
