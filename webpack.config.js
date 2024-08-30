@@ -66,10 +66,12 @@ module.exports = {
   plugins: [
     // 生成html文件
     new HtmlWebpackPlugin({
-      title: 'senlin-webpack-demo'
+      // title: 'senlin-webpack-demo',
+      // 默认文件，保持结构和原来一致，自动映入打包输出的资源
+      template: path.resolve(__dirname,"public/index.html"),
     }),
     new ESLintPlugin({
-      // 需要通过eslint检查哪些文件
+      // 需要检查哪些文件
       context: path.resolve(__dirname, "src")
     }),
   ],

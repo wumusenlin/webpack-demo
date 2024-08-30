@@ -10,6 +10,26 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./src/fn/sum.js":
+/*!***********************!*\
+  !*** ./src/fn/sum.js ***!
+  \***********************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   mySum: () => (/* binding */ mySum)\n/* harmony export */ });\nvar mySum = function mySum(a, b) {\n  return a + b;\n};\n\n\n//# sourceURL=webpack://webpack-demo/./src/fn/sum.js?");
+
+/***/ }),
+
+/***/ "./src/index.js":
+/*!**********************!*\
+  !*** ./src/index.js ***!
+  \**********************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _iconfont_iconfont_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./iconfont/iconfont.css */ \"./src/iconfont/iconfont.css\");\n/* harmony import */ var _fn_sum__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./fn/sum */ \"./src/fn/sum.js\");\n\n\n\n\n\nfunction component() {\n  var element = document.createElement(\"div\");\n  var textArr = ['hello', 'webpack'];\n  element.innerHTML = textArr.join(' ');\n  element.classList.add('hello');\n  console.log('style', _style_css__WEBPACK_IMPORTED_MODULE_0__[\"default\"]);\n  console.log('iconfontStyle', _iconfont_iconfont_css__WEBPACK_IMPORTED_MODULE_1__[\"default\"]);\n  return element;\n}\nfunction genImgIcon() {\n  var element = document.createElement(\"img\");\n  element.setAttribute('src', __webpack_require__(/*! ./assets/icon.png */ \"./src/assets/icon.png\"));\n  return element;\n}\nfunction genImgOri() {\n  var element = document.createElement(\"img\");\n  element.setAttribute('src', __webpack_require__(/*! ./assets/ori.jpg */ \"./src/assets/ori.jpg\"));\n  element.setAttribute('width', '100px');\n  return element;\n}\nfunction genFontIcon(className) {\n  var element = document.createElement(\"i\");\n  element.classList.add('iconfont');\n  element.classList.add(className);\n  return element;\n}\nfunction appendIconfont() {\n  ['icon-aixin', 'icon-caidan', 'icon-ceshi', 'icon-dianzan'].forEach(function (name) {\n    document.body.appendChild(genFontIcon(name));\n  });\n}\ndocument.body.appendChild(component());\ndocument.body.appendChild(genImgOri());\ndocument.body.appendChild(genImgIcon());\nappendIconfont();\nconsole.log('mySum', (0,_fn_sum__WEBPACK_IMPORTED_MODULE_2__.mySum)(2, 5));\n\n// run(main);\n\n//# sourceURL=webpack://webpack-demo/./src/index.js?");
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/dist/cjs.js!./src/iconfont/iconfont.css":
 /*!*************************************************************************!*\
   !*** ./node_modules/css-loader/dist/cjs.js!./src/iconfont/iconfont.css ***!
@@ -137,26 +157,6 @@ eval("\n\n/* istanbul ignore next  */\nfunction apply(styleElement, options, obj
 /***/ ((module) => {
 
 eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElement) {\n  if (styleElement.styleSheet) {\n    styleElement.styleSheet.cssText = css;\n  } else {\n    while (styleElement.firstChild) {\n      styleElement.removeChild(styleElement.firstChild);\n    }\n    styleElement.appendChild(document.createTextNode(css));\n  }\n}\nmodule.exports = styleTagTransform;\n\n//# sourceURL=webpack://webpack-demo/./node_modules/style-loader/dist/runtime/styleTagTransform.js?");
-
-/***/ }),
-
-/***/ "./src/fn/sum.js":
-/*!***********************!*\
-  !*** ./src/fn/sum.js ***!
-  \***********************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   mySum: () => (/* binding */ mySum)\n/* harmony export */ });\nconst mySum = (a, b) => {\n  return a + b\n}\n\n\n\n\n//# sourceURL=webpack://webpack-demo/./src/fn/sum.js?");
-
-/***/ }),
-
-/***/ "./src/index.js":
-/*!**********************!*\
-  !*** ./src/index.js ***!
-  \**********************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _iconfont_iconfont_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./iconfont/iconfont.css */ \"./src/iconfont/iconfont.css\");\n/* harmony import */ var _fn_sum__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./fn/sum */ \"./src/fn/sum.js\");\n\n\n\n\n\n\nfunction component() {\n  const element = document.createElement(\"div\");\n  const textArr = ['hello', 'webpack']\n  element.innerHTML = textArr.join(' ');\n  element.classList.add('hello');\n  console.log('style', _style_css__WEBPACK_IMPORTED_MODULE_0__[\"default\"])\n  console.log('iconfontStyle', _iconfont_iconfont_css__WEBPACK_IMPORTED_MODULE_1__[\"default\"])\n  return element;\n}\nfunction genImgIcon() {\n  const element = document.createElement(\"img\");\n  element.setAttribute('src', __webpack_require__(/*! ./assets/icon.png */ \"./src/assets/icon.png\"))\n  return element;\n}\nfunction genImgOri() {\n  const element = document.createElement(\"img\");\n  element.setAttribute('src', __webpack_require__(/*! ./assets/ori.jpg */ \"./src/assets/ori.jpg\"))\n  element.setAttribute('width', '100px')\n  return element;\n}\nfunction genFontIcon(className) {\n  const element = document.createElement(\"i\");\n  element.classList.add('iconfont')\n  element.classList.add(className)\n\n  return element;\n}\nfunction appendIconfont() {\n  ['icon-aixin', 'icon-caidan', 'icon-ceshi', 'icon-dianzan'].forEach((name) => {\n    document.body.appendChild(genFontIcon(name));\n  }\n  )\n}\n\ndocument.body.appendChild(component());\ndocument.body.appendChild(genImgOri());\ndocument.body.appendChild(genImgIcon());\nappendIconfont()\n\nconsole.log('mySum',(0,_fn_sum__WEBPACK_IMPORTED_MODULE_2__.mySum)(2,5))\n\n\n\n// run(main);\n\n\n\n//# sourceURL=webpack://webpack-demo/./src/index.js?");
 
 /***/ }),
 
