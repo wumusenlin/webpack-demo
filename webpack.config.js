@@ -68,11 +68,17 @@ module.exports = {
     new HtmlWebpackPlugin({
       // title: 'senlin-webpack-demo',
       // 默认文件，保持结构和原来一致，自动映入打包输出的资源
-      template: path.resolve(__dirname,"public/index.html"),
+      template: path.resolve(__dirname, "public/index.html"),
     }),
     new ESLintPlugin({
       // 需要检查哪些文件
       context: path.resolve(__dirname, "src")
     }),
   ],
+  // 开发服务器配置
+  devServer: {
+    host: "localhost",//启动服务器域名
+    port: "7777",
+    open: true,
+  },
 }
