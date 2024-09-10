@@ -1,6 +1,7 @@
 const path = require('path');//node的路径模块
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ESLintPlugin = require('eslint-webpack-plugin')
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
   entry: './src/index.js',
@@ -18,7 +19,8 @@ module.exports = {
       {
         test: /\.css$/i,
         use: [
-          'style-loader', // 将js从css通过创建style样式放入到html文件中
+          // 'style-loader', // 将js从css通过创建style样式放入到html文件中
+          MiniCssExtractPlugin.loader, // 替换'style-loader'；可以将css单独输出为css文件
           'css-loader', // 将css资源编译成commonjs的模块到js种
         ],
       },
@@ -63,6 +65,9 @@ module.exports = {
   },
   //插件
   plugins: [
+    new MiniCssExtractPlugin({
+      filename: 'static/css/main.css'
+    }),
     // 生成html文件
     new HtmlWebpackPlugin({
       // title: 'senlin-webpack-demo',
